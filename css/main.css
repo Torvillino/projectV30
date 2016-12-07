@@ -5,10 +5,12 @@
 }
 
 .background{
-    background:url('../images/background.png');
+    background:url('../images/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: black;
+    padding: 35px;
+    background-position: 0 50px;
 }
 
 .box-center {
