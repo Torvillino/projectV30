@@ -53,18 +53,17 @@
 		<div class="row" style="margin-top:40px;font-size: 28px;">
 
 			<!-- SELECTOR -->
-			<div class="col-xs-12 col-sm-6 col-md-6" style="margin-top:20px;">
+			<div class="col-xs-12 col-sm-12 col-md-6" style="margin-top:20px;">
 				<div class="box-center" style="margin:30px;padding:20px">
 					<p>ASIGNACIÓN DE FRATERNIDAD</p>
 					<div style="font-size: 14px;">
-						<p>Introduce tú primer apellido y el sistema te asignara a la fraternidad a propiada para ti</p>
+						<p>Introduce tú primer apellido y el sistema te asignará a la fraternidad a propiada para ti</p>
 					</div>
 					<div style="margin-top:20px;"">
 						<div class="form-group">
-							<input type="text" ng-model="surname" class="form-control" id="surname" placeholder="Introduce tu primer apellido">
+							<input type="text" ng-model="surname" class="form-control" id="surname" placeholder="Introduce tú primer apellido">
 						</div>
-					</div>
-					<div>{{frat}}</div>
+					</div>					
 					<div class="text-center">
 						<button type="button" class="btn-v30" ng-click="getFrat()">
 							<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
@@ -73,8 +72,33 @@
 				</div>
 			</div>
 
+			<!-- FRATERNIDAD -->
+			<div class="col-xs-12 col-sm-12 col-md-6" style="margin-top:20px;">
+				<div class="box-center" style="margin:30px;padding:20px">
+					<p>FRATERNIDAD</p>
+					<div style="font-size: 14px;">
+						<p ng-if="!showFrat">Utiliza el selector de fraternidad para ver a cual perteneces</p>
+						<p ng-if="showFrat">Has sido admitido en la fraternidad:</p>
+					</div>
+					<div ng-if="frat === '1'">ALPHA</div>
+					<div ng-if="frat === '2'">BETA</div>
+					<div ng-if="frat === '3'">GAMMA</div>
+					<div ng-if="frat === '4'">DELTA</div>
+					<div ng-if="frat === '5'">EPSILON</div>
+					<div ng-if="frat === '6'">
+						<div ng-repeat="(key, value) in listUser">
+							<div style="font-size:9px" >{{key}} : {{value}}</div>
+    					</div>
+					</div>
+					<div ng-if="frat === '7'">Opss, el sistema no te reconoce, contacta con el administrador para solventar el problema</div>
+					<div style="font-size: 14px;">
+						<p ng-if="showFrat">Defiende con honor tu escudo en la gran batalla de las fraternidades</p>
+					</div>
+				</div>
+			</div>
+
 			<!-- INFO -->
-			<div class="col-xs-12 col-sm-6 col-md-6" style="margin-top:20px;">
+			<div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px;">
 				<div class="box-center" style="margin:30px;padding:20px">
 					<p>CONDICIONES DE USO</p>
 					<div style="font-size: 14px;">
@@ -86,6 +110,5 @@
 			</div>
 		</div>
 	
-		
 	</body>
 </html>
