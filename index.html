@@ -61,7 +61,7 @@
 					</div>
 					<div style="margin-top:20px;"">
 						<div class="form-group">
-							<input type="text" ng-model="surname" class="form-control" id="surname" placeholder="Introduce tú primer apellido">
+							<input ng-keypress="getFratKeyPress($event)" type="text" ng-model="surname" class="form-control" id="surname" placeholder="Introduce tú primer apellido">
 						</div>
 					</div>					
 					<div class="text-center">
@@ -75,24 +75,54 @@
 			<!-- FRATERNIDAD -->
 			<div class="col-xs-12 col-sm-12 col-md-6" style="margin-top:20px;">
 				<div class="box-center" style="margin:30px;padding:20px">
-					<p>FRATERNIDAD</p>
-					<div style="font-size: 14px;">
-						<p ng-if="!showFrat">Utiliza el selector de fraternidad para ver a cual perteneces</p>
-						<p ng-if="showFrat">Has sido admitido en la fraternidad:</p>
+					
+					<!-- Texto informativo sin seleccion-->
+					<div ng-if="!showFrat">
+						<p>FRATERNIDAD</p>
+						<p style="font-size: 14px;">
+							Utiliza el selector de fraternidad para ver a cual perteneces
+						</p>
 					</div>
-					<div ng-if="frat === '1'">ALPHA</div>
-					<div ng-if="frat === '2'">BETA</div>
-					<div ng-if="frat === '3'">GAMMA</div>
-					<div ng-if="frat === '4'">DELTA</div>
-					<div ng-if="frat === '5'">EPSILON</div>
-					<div ng-if="frat === '6'">
-						<div ng-repeat="(key, value) in listUser">
-							<div style="font-size:9px" >{{key}} : {{value}}</div>
-    					</div>
-					</div>
-					<div ng-if="frat === '7'">Opss, el sistema no te reconoce, contacta con el administrador para solventar el problema</div>
-					<div style="font-size: 14px;">
-						<p ng-if="showFrat">Defiende con honor tu escudo en la gran batalla de las fraternidades</p>
+					
+					<!-- Mostramos la parte de las fraternidades-->
+					<div ng-if="showFrat" class="animate-if">
+
+						<!-- Texto comun-->
+						<div ng-if="frat != '7'" style="font-size: 14px; margin-bottom:30px">
+							<p>
+								Defiende tu escudo en la gran batalla de las fraternidades, tú fraternidad es...
+							</p>
+						</div>
+
+						<!-- FRATERNIDADES -->	
+						<div ng-if="frat === '1'" class="frat-box omega">
+							<div style="font-size:70px">&Omega;&Mu;</div>
+							<p style="font-size:12px">(OMEGA MU)</p><!-- NEGRO  GRIS-->
+						</div>
+						<div ng-if="frat === '2'" class="frat-box phi">
+							<div style="font-size:70px">&Phi;&Chi;</div>
+							<p style="font-size:12px">(PHI CHI)</p><!--ROSA ROJO-->
+						</div>
+						<div ng-if="frat === '3'" class="frat-box delta">
+							<div style="font-size:70px">&Delta;&Theta;</div>
+							<p style="font-size:12px">(DELTA THETA)</p> <!-- AZUL BLANCO -->
+						</div>
+						<div ng-if="frat === '4'" class="frat-box kappa">
+							<div style="font-size:70px">&Kappa;&Sigma;</div>
+							<p style="font-size:12px">(KAPPA SIGMA)</p> <!-- VERDE MARRON -->
+						</div>
+						
+						<!-- TODOS -->
+						<div ng-if="frat === '6'">
+							<div ng-repeat="(key, value) in listUser">
+								<div style="font-size:9px" >{{key}} : {{value}}</div>
+	    					</div>
+						</div>
+
+						<!-- NO ENCONTRADO -->
+						<div ng-if="frat === '7'">
+							Opss, el sistema no te reconoce, contacta con el administrador para solventar el problema
+						</div>
 					</div>
 				</div>
 			</div>

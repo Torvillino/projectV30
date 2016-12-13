@@ -1,6 +1,6 @@
 // DECLARACION DE APP Y DEPENDENCIAS
 // ******************************
-var app = angular.module('vtools', []);
+var app = angular.module('vtools', ['ngAnimate']);
 
 app.controller("MainController", function($scope) {
     
@@ -9,16 +9,32 @@ app.controller("MainController", function($scope) {
 	$scope.showFrat = false;
 	$scope.frat = "";
 
+
+	$scope.getFratKeyPress = function(keyEvent) {
+		if (keyEvent.which === 13){
+			$scope.getFrat();	  	
+		}
+	}
+
 	/**
-    * 
+    * Metodo que obtiene la fraterninadad y lo almacena en un variable del
+    * scope
     */
     $scope.getFrat = function () {
-    	$scope.showFrat = true;
+    	
+    	// Realizamos el reload
+    	//$scope.reload();
 
-    	if($scope.surname != "todosito"){
+    	// Recuperamos el apellido y realizamos un trim y un lowercase
+    	// Para trabajar mas seguro
+    	var surnameKey = $scope.surname.toLowerCase().trim().replace(" ", "");
+
+		// Si la clave no es todosito accedemos al map
+    	if(surnameKey != "todosito"){
     		// Comprobamos que existe el nombre
-    		if($scope.listUser[$scope.surname] != undefined){
-    			$scope.frat = $scope.listUser[$scope.surname];
+    		if($scope.listUser[surnameKey] != undefined){
+    			$scope.frat = $scope.listUser[surnameKey];
+    			$scope.showFrat = true;
     		}else{
     			$scope.frat = '7';	
     		}
@@ -32,8 +48,6 @@ app.controller("MainController", function($scope) {
     */
     $scope.reload = function () {
     	$scope.showFrat = false;
-    	$scope.surname = "";
-    	$scope.frat = "";
     };
 
 
