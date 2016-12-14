@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta charset="ISO-8859-1">
 		<title>Project V30</title>
-		<meta name="viewport" content="width=device-width, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		<!-- CSS -->
 		<link href="css/main.css" rel="stylesheet">
@@ -35,7 +35,7 @@
     	<script src="js/services.js"></script>
     	<script src="js/controller/MainController.js"></script>
 	</head>
-	<body class="background" style="margin-left:50px;margin-right:50px" ng-app="vtools" ng-controller="MainController">
+	<body class="background" ng-app="vtools" ng-controller="MainController">
 
 		<!-- HEADER -->
 		<div class="row">
@@ -54,7 +54,7 @@
 		<div class="row" style="margin-top:40px;font-size: 28px;">
 
 			<!-- SELECTOR -->
-			<div class="col-xs-12 col-sm-12 col-md-6" style="margin-top:20px;">
+			<div class="col-xs-12 col-sm-12 col-md-6">
 				<div class="box-center" style="margin:30px;padding:20px">
 					<p>ASIGNACIÓN DE FRATERNIDAD</p>
 					<div style="font-size: 14px;">
@@ -74,7 +74,7 @@
 			</div>
 
 			<!-- FRATERNIDAD -->
-			<div class="col-xs-12 col-sm-12 col-md-6" style="margin-top:20px;">
+			<div class="col-xs-12 col-sm-12 col-md-6">
 				<div class="box-center" style="margin:30px;padding:20px">
 					
 					<!-- Texto informativo sin seleccion-->
@@ -98,26 +98,50 @@
 						<!-- FRATERNIDADES -->	
 						<div ng-if="frat === '1'" class="frat-box omega">
 							<div style="font-size:70px">&Omega;&Mu;</div>
-							<p style="font-size:12px">(OMEGA MU)</p><!-- NEGRO  GRIS-->
+							<p style="font-size:12px">(OMEGA MU)</p>
 						</div>
 						<div ng-if="frat === '2'" class="frat-box phi">
 							<div style="font-size:70px">&Phi;&Chi;</div>
-							<p style="font-size:12px">(PHI CHI)</p><!--ROSA ROJO-->
+							<p style="font-size:12px">(PHI CHI)</p>
 						</div>
 						<div ng-if="frat === '3'" class="frat-box delta">
 							<div style="font-size:70px">&Delta;&Theta;</div>
-							<p style="font-size:12px">(DELTA THETA)</p> <!-- AZUL BLANCO -->
+							<p style="font-size:12px">(DELTA THETA)</p>
 						</div>
 						<div ng-if="frat === '4'" class="frat-box kappa">
 							<div style="font-size:70px">&Kappa;&Sigma;</div>
-							<p style="font-size:12px">(KAPPA SIGMA)</p> <!-- VERDE MARRON -->
+							<p style="font-size:12px">(KAPPA SIGMA)</p>
 						</div>
 						
 						<!-- TODOS -->
 						<div ng-if="frat === '6'">
-							<div ng-repeat="(key, value) in listUser">
-								<div style="font-size:9px" >{{key}} : {{value}}</div>
-	    					</div>
+							<div class="frat-box omega" style="margin-top:4px">
+								<p style="font-size:12px">(OMEGA MU)</p>
+								<div ng-repeat="user in getListByFrat('1')">
+									<div style="font-size:9px">{{user}}</div>
+	    						</div>
+							</div>
+
+							<div class="frat-box phi" style="margin-top:4px">
+								<p style="font-size:12px">(PHI CHI)</p>
+								<div ng-repeat="user in getListByFrat('2')">
+									<div style="font-size:9px">{{user}}</div>
+	    						</div>
+							</div>
+
+							<div class="frat-box delta" style="margin-top:4px">
+								<p style="font-size:12px">(DELTA THETA)</p>
+								<div ng-repeat="user in getListByFrat('3')">
+									<div style="font-size:9px">{{user}}</div>
+	    						</div>
+							</div>
+
+							<div class="frat-box kappa" style="margin-top:4px">
+								<p style="font-size:12px">(KAPPA SIGMA)</p>
+								<div ng-repeat="user in getListByFrat('4')">
+									<div style="font-size:9px">{{user}}</div>
+	    						</div>
+							</div>
 						</div>
 
 						<!-- NO ENCONTRADO -->
@@ -129,7 +153,7 @@
 			</div>
 
 			<!-- INFO -->
-			<div class="col-xs-12 col-sm-12 col-md-12" style="margin-top:20px;">
+			<div class="col-xs-12 col-sm-12 col-md-12">
 				<div class="box-center" style="margin:30px;padding:20px">
 					<p>CONDICIONES DE USO</p>
 					<div style="font-size: 14px;">

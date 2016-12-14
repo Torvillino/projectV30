@@ -46,8 +46,19 @@ app.controller("MainController", function($scope) {
     /**
     * 
     */
-    $scope.reload = function () {
-    	$scope.showFrat = false;
+    $scope.getListByFrat = function (idFrat) {
+
+        // Listado a devolver
+        var list = new Array();
+
+        // Recorremos el listado de usuarios y nos quedamos con los usuarios
+        $.each($scope.listUser, function(key, value){
+            if(value == idFrat){
+                list.push(key);
+            }
+        });
+
+    	return list;
     };
 
 
