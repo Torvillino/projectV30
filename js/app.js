@@ -5,11 +5,7 @@ var app = angular.module('vtools', ['ngAnimate']);
 app.controller("MainController", function($scope) {
     
 
-    $scope.listUser = {"madridano":"1","murillo":"1","iñigo2":"1","garofalo":"1","demarco":"1","garcia":"2","calleja":"2","mediavilla":"2","rodriguez":"2""montilla":"3","muñoz":"3","iñigo":"3","muñoz":"3","ortiz":"3","sola":"4","mayoral":"4","martinez":"4","perez":"4","carballo":"4"};
-
-    $scope.listCaptain = {"garcia":"1","madridano":"1","sola":"1","montilla":"1"};
-
-	/*$scope.listUser = 
+	$scope.listUser = 
         {
             "madridano":"1",
             "murillo":"1",
@@ -19,7 +15,7 @@ app.controller("MainController", function($scope) {
             "garcia":"2",
             "calleja":"2",
             "mediavilla":"2",
-            "rodriguez":"2"
+            "rodriguez":"2",
             "montilla":"3",
             "muñoz":"3",
             "iñigo":"3",
@@ -38,7 +34,8 @@ app.controller("MainController", function($scope) {
             "madridano":"1",
             "sola":"1",
             "montilla":"1"
-        };*/
+        };
+
 	$scope.surname;
 	$scope.showFrat = false;
 	$scope.frat = "";
