@@ -51,27 +51,37 @@
 }
 
 .omega{
-	border: 1px solid #000000;
-    background: #cecece;
-    color: #000000;
+	border: 1px solid #ff871d;
+    background: #fff4d5;
+    color: #ff871d;
+    text-shadow: 1px 1px rgba(218, 173, 45, 0.36);
 }
 
 .phi{
 	border: 1px solid #9e001c;
     background: pink;
     color: #9e001c;
+    text-shadow: 1px 1px rgba(255, 0, 0, 0.27);
 }
 
 .delta{
 	order: 1px solid #3c87d6;
     background: #f1f5ff;
     color: #3c87d6;
+    text-shadow: 1px 1px rgba(126, 151, 243, 0.27);
 }
 
 .kappa{
 	border: 1px solid #118221;
     background: #f0fff5;
     color: #118221;
+    text-shadow: 1px 1px rgba(61, 107, 63, 0.3);
+
+}
+
+.box{
+	width: 49%;
+    display: inline-block;
 }
 
 .animate-if {

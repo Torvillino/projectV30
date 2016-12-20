@@ -42,7 +42,7 @@
 			<div class="col-xs-2"></div>
 			<div class="col-xs-8  text-center">
 				<div class="header" style="margin-top:30px">
-					<font color="white">PROJECT</font> <font color="red">[V30]</font>
+					<font color="white" style="font-weight: 800;">PROJECT</font> <font color="red" style="font-weight: 800;">[V30]</font>
 				</div>
 				<div>
 					<font color="white">"Una fiesta para ser recordada como leyenda"</font>
@@ -99,44 +99,48 @@
 						<div ng-if="frat === '1'" class="frat-box omega">
 							<div style="font-size:70px">&Omega;&Mu;</div>
 							<p style="font-size:12px">(OMEGA MU)</p>
+							<div ng-if="isCaptain()">{{textCaptain}}</div>
 						</div>
 						<div ng-if="frat === '2'" class="frat-box phi">
 							<div style="font-size:70px">&Phi;&Chi;</div>
 							<p style="font-size:12px">(PHI CHI)</p>
+							<div ng-if="isCaptain()">{{textCaptain}}</div>
 						</div>
 						<div ng-if="frat === '3'" class="frat-box delta">
 							<div style="font-size:70px">&Delta;&Theta;</div>
 							<p style="font-size:12px">(DELTA THETA)</p>
+							<div ng-if="isCaptain()">{{textCaptain}}</div>
 						</div>
 						<div ng-if="frat === '4'" class="frat-box kappa">
 							<div style="font-size:70px">&Kappa;&Sigma;</div>
 							<p style="font-size:12px">(KAPPA SIGMA)</p>
+							<div ng-if="isCaptain()">{{textCaptain}}</div>
 						</div>
 						
 						<!-- TODOS -->
 						<div ng-if="frat === '6'">
-							<div class="frat-box omega" style="margin-top:4px">
+							<div class="frat-box omega box" style="margin-top:4px">
 								<p style="font-size:12px">(OMEGA MU)</p>
 								<div ng-repeat="user in getListByFrat('1')">
 									<div style="font-size:9px">{{user}}</div>
 	    						</div>
 							</div>
 
-							<div class="frat-box phi" style="margin-top:4px">
+							<div class="frat-box phi box" style="margin-top:4px">
 								<p style="font-size:12px">(PHI CHI)</p>
 								<div ng-repeat="user in getListByFrat('2')">
 									<div style="font-size:9px">{{user}}</div>
 	    						</div>
 							</div>
 
-							<div class="frat-box delta" style="margin-top:4px">
+							<div class="frat-box delta box" style="margin-top:4px">
 								<p style="font-size:12px">(DELTA THETA)</p>
 								<div ng-repeat="user in getListByFrat('3')">
 									<div style="font-size:9px">{{user}}</div>
 	    						</div>
 							</div>
 
-							<div class="frat-box kappa" style="margin-top:4px">
+							<div class="frat-box kappa box" style="margin-top:4px">
 								<p style="font-size:12px">(KAPPA SIGMA)</p>
 								<div ng-repeat="user in getListByFrat('4')">
 									<div style="font-size:9px">{{user}}</div>
