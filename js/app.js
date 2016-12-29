@@ -31,7 +31,7 @@ app.controller("MainController", function($scope) {
     $scope.listCaptain = 
         {
             "garcia":"1",
-            "madridano":"1",
+            "demarco":"1",
             "sola":"1",
             "montilla":"1"
         };
@@ -41,28 +41,26 @@ app.controller("MainController", function($scope) {
 	$scope.frat = "";
     $scope.textCaptain = "Eres el lider";
 
-    // 1
+    // 1 (5)
     //madridano (Eva)
     //murillo (Felipe)
     //iñigo2 (Pili)
     //garofalo (Mau)
     //demarco (Monica)
 
-    // 2
+    // 2 (4)
     //garcia (David)
-    //calleja (Irene)
     //mediavilla (Javi)
     //rodriguez (Noa)
     //rodriguez (Sandra)
         
-    // 3
+    // 3 (4)
     //montilla (Beatriz)
     //muñoz (Eduardo)
     //iñigo (Sergio)
     //ortiz (Lorena)
-    //fernandez (aj)    
-
-    // 4
+    
+    // 4 (5)
     //sola (Fakundo)
     //mayoral (Monica)
     //martinez (Beatriz)
@@ -70,6 +68,9 @@ app.controller("MainController", function($scope) {
     //carballo (David)
 
     //
+    //fernandez (aj) 
+    //ocaña (pilar)
+    //calleja (Irene)
     //martin
     //martin2
 
