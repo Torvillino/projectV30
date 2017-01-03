@@ -12,20 +12,28 @@ app.controller("MainController", function($scope) {
             "iñigo2":"1",
             "garofalo":"1",
             "demarco":"1",
+            "gutierrez":"1",
+            "fernandez":"1",
             "garcia":"2",
             "calleja":"2",
             "mediavilla":"2",
             "rodriguez":"2",
-            "montilla":"3",
+            "martin":"2",
+            "lucas":"2",
+            "arenillas":"3",
             "muñoz":"3",
             "iñigo":"3",
             "muñoz":"3",
             "ortiz":"3",
+            "cano":"3",
+            "padilla":"3",
             "sola":"4",
             "mayoral":"4",
             "martinez":"4",
             "perez":"4",
-            "carballo":"4"
+            "carballo":"4",
+            "hervas":"4",
+            "gonzalez":"4"
         };
 
     $scope.listCaptain = 
@@ -41,37 +49,46 @@ app.controller("MainController", function($scope) {
 	$scope.frat = "";
     $scope.textCaptain = "Eres el lider";
 
-    // 1 (5)
+    // 1 (7)
     //madridano (Eva)
     //murillo (Felipe)
-    //iñigo2 (Pili)
+    //garcia (Pili)
     //garofalo (Mau)
     //demarco (Monica)
+    //gutierrez (Daniel)--
+    //fernandez (AJ)--
 
-    // 2 (4)
+    // 2 (7)
     //garcia (David)
     //mediavilla (Javi)
     //rodriguez (Noa)
     //rodriguez (Sandra)
+    //martin (Jony)--
+    //arenillas (Rocio)--
+    //lucas (Vir)--
         
-    // 3 (4)
+    // 3 (6)
     //montilla (Beatriz)
     //muñoz (Eduardo)
     //iñigo (Sergio)
     //ortiz (Lorena)
+    //cano (David)--
+    //padilla (Belen)--
     
-    // 4 (5)
+    // 4 (7)
     //sola (Fakundo)
     //mayoral (Monica)
     //martinez (Beatriz)
     //perez (David)
     //carballo (David)
+    //hervas (MªAngeles)--
+    //gonzalez (Joni)
+    
+    
 
     //
-    //fernandez (aj) 
     //ocaña (pilar)
     //calleja (Irene)
-    //martin
     //martin2
 
 	$scope.getFratKeyPress = function(keyEvent) {
@@ -171,7 +188,6 @@ app.controller("MainController", function($scope) {
        cadena = cadena.replace(/í/gi,"i");
        cadena = cadena.replace(/ó/gi,"o");
        cadena = cadena.replace(/ú/gi,"u");
-       cadena = cadena.replace(/ñ/gi,"n");
 
        return cadena;
     }
