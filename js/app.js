@@ -52,7 +52,7 @@ app.controller("MainController", function($scope) {
     // 1 (7)
     //madridano (Eva)
     //murillo (Felipe)
-    //garcia (Pili)
+    //iñi (Pili)
     //garofalo (Mau)
     //demarco (Monica)
     //gutierrez (Daniel)--
