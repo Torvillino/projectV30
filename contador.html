@@ -35,7 +35,7 @@
     	<script src="js/services.js"></script>
     	<script src="js/controller/CounterController.js"></script>
 	</head>
-	<body class="background" ng-app="vtools" ng-controller="CounterController">
+	<body class="background" ng-app="vtools" ng-controller="MainController" ng-keyup="getFratKeyPress($event)">
 
 		<!-- HEADER -->
 		<div class="row">
@@ -45,20 +45,20 @@
 					<div style="margin-bottom:10px">
 						<div style="display: inline-block;width: 70px;" class="frat-box kappa">
 							<div style="font-size:20px">&Kappa;&Sigma;</div>
-							<p style="font-size:12px">0</p>
+							<p style="font-size:12px">{{totalKappa}}</p>
 						</div>
 						<div style="display: inline-block;width:70%; margin-bottom:0px !important" class="progress">
-							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
+							<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" ng-style="{width: totalKappa + '%' }">
 						  </div>
 						</div>
 					</div>
 					<div style="margin-bottom:10px">
 						<div style="display: inline-block;width: 70px;" class="frat-box delta">
 							<div style="font-size:20px">&Delta;&Theta;</div>
-							<p style="font-size:12px">0</p>
+							<p style="font-size:12px">{{totalDelta}}</p>
 						</div>
 						<div style="display: inline-block;width:70%; margin-bottom:0px !important" class="progress">
-							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+							<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" ng-style="{width: totalDelta + '%' }">
 							</div>
 						</div>
 					</div>
@@ -66,10 +66,10 @@
 					<div style="margin-bottom:10px">
 						<div style="display: inline-block;width: 70px;"  class="frat-box omega">
 							<div style="font-size:20px">&Omega;&Alpha;</div>
-							<p style="font-size:12px">0</p>
+							<p style="font-size:12px">{{totaOmega}}</p>
 						</div>
 						<div style="display: inline-block;width:70%; margin-bottom:0px !important" class="progress">
-							<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 3%">
+							<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" ng-style="{width: totaOmega + '%' }">
 							</div>
 						</div>
 					</div>
@@ -77,10 +77,10 @@
 					<div style="margin-bottom:10px">
 						<div style="display: inline-block;width: 70px;" class="frat-box phi">
 							<div style="font-size:20px">&Gamma;&Beta;</div>
-							<p style="font-size:12px">0</p>
+							<p style="font-size:12px">{{totalPhi}}</p>
 						</div>
 						<div style="display: inline-block;width:70%; margin-bottom:0px !important" class="progress">
-							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+							<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" ng-style="{width: totalPhi + '%' }">
 							</div>
 						</div>					
 					</div>

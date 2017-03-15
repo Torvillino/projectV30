@@ -9,38 +9,32 @@ app.controller("MainController", function($scope) {
         {
             "madridano":"1",
             "murillo":"1",
-            "iñigo2":"1",
             "garofalo":"1",
             "demarco":"1",
-            "gutierrez":"1",
-            "fernandez":"1",
+            "bergon":"1",
             "garcia":"2",
-            "calleja":"2",
             "mediavilla":"2",
-            "rodriguez":"2",
-            "martin":"2",
             "lucas":"2",
-            "arenillas":"3",
+            "fernandez":"2",
+            "iñigo":"2",
+            "montilla" : "3",
             "muñoz":"3",
-            "iñigo":"3",
-            "muñoz":"3",
-            "ortiz":"3",
-            "cano":"3",
             "padilla":"3",
-            "sola":"4",
-            "mayoral":"4",
-            "martinez":"4",
+            "parra":"3",
+            "garcia":"3",
             "perez":"4",
+            "mayoral":"4",
             "carballo":"4",
-            "hervas":"4",
-            "gonzalez":"4"
+            "gutierrez":"4",
+            "sola":"4",
+            "martinez":"4"
         };
 
     $scope.listCaptain = 
         {
             "garcia":"1",
             "demarco":"1",
-            "sola":"1",
+            "perez":"1",
             "montilla":"1"
         };
 
@@ -49,52 +43,111 @@ app.controller("MainController", function($scope) {
 	$scope.frat = "";
     $scope.textCaptain = "Eres el lider";
 
-    // 1 (7)
+    // 1 (5)
     //madridano (Eva)
-    //murillo (Felipe)
-    //iñi (Pili)
+    //murillo (Felipe)    
     //garofalo (Mau)
     //demarco (Monica)
-    //gutierrez (Daniel)--
-    //fernandez (AJ)--
+    //Bergon (Rodri)
 
-    // 2 (7)
+
+    // 2 (5)
     //garcia (David)
     //mediavilla (Javi)
-    //rodriguez (Noa)
-    //rodriguez (Sandra)
-    //martin (Jony)--
-    //arenillas (Rocio)--
-    //lucas (Vir)--
-        
-    // 3 (6)
+    //lucas (Vir)
+    //fernandez (AJ)
+    //iñigo (Sergio)
+
+    // 3 (5)
     //montilla (Beatriz)
     //muñoz (Eduardo)
-    //iñigo (Sergio)
-    //ortiz (Lorena)
-    //cano (David)--
-    //padilla (Belen)--
-    
-    // 4 (7)
-    //sola (Fakundo)
-    //mayoral (Monica)
-    //martinez (Beatriz)
+    //padilla (Belen)
+    //parra (Ulises)
+    //garcia (Pili)
+
+    // 4 (6)
     //perez (David)
+    //mayoral (Monica)
     //carballo (David)
-    //hervas (MªAngeles)--
-    //gonzalez (Joni)
-    
+    //gutierrez (Daniel)    
+    //sola (Fakundo)
+    //martinez (Beatriz)
     
 
-    //
+    
+    //---------------------
+    //rodriguez (Sandra)
+    //ortiz (Lorena)
+    //cano (David)--
+    //martin (Jony)--
+    //arenillas (Rocio)--
+    //hervas (MªAngeles)--
+    //gonzalez (Joni)
+    //rodriguez (Noa)
     //ocaña (pilar)
     //calleja (Irene)
     //martin2
+
+    $scope.totalKappa = 0;
+    $scope.totalDelta = 0;
+    $scope.totaOmega = 0;
+    $scope.totalPhi = 0;
 
 	$scope.getFratKeyPress = function(keyEvent) {
 		if (keyEvent.which === 13){
 			$scope.getFrat();	  	
 		}
+
+
+        if(keyEvent.which === 49){
+            if(keyEvent.altKey){
+                if($scope.totalKappa<100){
+                    $scope.totalKappa++;    
+                }
+            }else{
+                if($scope.totalKappa>0){
+                    $scope.totalKappa--;    
+                }
+            }
+        }
+
+        if(keyEvent.which === 50){
+            if(keyEvent.altKey){
+                if($scope.totalDelta<100){
+                    $scope.totalDelta++;    
+                }
+            }else{
+                if($scope.totaOmega>0){
+                    $scope.totaOmega--;    
+                }
+                $scope.totalDelta--;    
+            }
+        }
+
+        if(keyEvent.which === 51){
+            if(keyEvent.altKey){
+                if($scope.totaOmega<100){
+                    $scope.totaOmega++;    
+                }
+                
+            }else{
+                if($scope.totaOmega>0){
+                    $scope.totaOmega--;    
+                }
+            }
+        }
+
+        if(keyEvent.which === 52){
+            if(keyEvent.altKey){
+                if($scope.totalPhi<100){
+                    $scope.totalPhi++;    
+                }
+            }else{
+                if($scope.totalPhi>0){
+                    $scope.totalPhi--;    
+                }
+            }
+        }
 	}
 
 	/**
