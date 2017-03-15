@@ -16,12 +16,13 @@ app.controller("MainController", function($scope) {
             "mediavilla":"2",
             "lucas":"2",
             "fernandez":"2",
-            "iñigo":"2",
+            "garcia2":"2",
             "montilla" : "3",
             "muñoz":"3",
             "padilla":"3",
             "parra":"3",
-            "garcia":"3",
+            "lupu":"3",
+            "iñigo":"3",
             "perez":"4",
             "mayoral":"4",
             "carballo":"4",
@@ -56,14 +57,16 @@ app.controller("MainController", function($scope) {
     //mediavilla (Javi)
     //lucas (Vir)
     //fernandez (AJ)
-    //iñigo (Sergio)
+    //garcia (Pili)
+    
 
-    // 3 (5)
+    // 3 (6)
     //montilla (Beatriz)
     //muñoz (Eduardo)
     //padilla (Belen)
     //parra (Ulises)
-    //garcia (Pili)
+    //lupu (nicoleta)
+    //iñigo (Sergio)
 
     // 4 (6)
     //perez (David)
