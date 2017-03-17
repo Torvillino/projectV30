@@ -11,7 +11,7 @@ app.controller("MainController", function($scope) {
             "murillo":"1",
             "garofalo":"1",
             "demarco":"1",
-            "bergon":"1",
+            "lupu":"1",
             "garcia":"2",
             "mediavilla":"2",
             "lucas":"2",
@@ -21,7 +21,7 @@ app.controller("MainController", function($scope) {
             "muñoz":"3",
             "padilla":"3",
             "parra":"3",
-            "lupu":"3",
+            "bergon":"3",
             "iñigo":"3",
             "perez":"4",
             "mayoral":"4",
@@ -123,7 +123,6 @@ app.controller("MainController", function($scope) {
                 if($scope.totaOmega>0){
                     $scope.totaOmega--;    
                 }
-                $scope.totalDelta--;    
             }
         }
 
